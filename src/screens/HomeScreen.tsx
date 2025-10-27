@@ -54,7 +54,10 @@ export default function HomeScreen({ navigation }: any) {
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.featureCard}>
+          <TouchableOpacity 
+            style={styles.featureCard}
+            onPress={() => navigation.navigate('FlightInfo')}
+          >
             <Text style={styles.featureEmoji}>📅</Text>
             <Text style={styles.featureCardTitle}>Flight Info</Text>
             <Text style={styles.featureCardDescription}>
@@ -62,11 +65,36 @@ export default function HomeScreen({ navigation }: any) {
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.featureCard}>
+          <TouchableOpacity 
+            style={styles.featureCard}
+            onPress={() => navigation.navigate('ShoppingDirectory')}
+          >
             <Text style={styles.featureEmoji}>🛍️</Text>
             <Text style={styles.featureCardTitle}>Shopping</Text>
             <Text style={styles.featureCardDescription}>
               Discover shops & deals
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity 
+            style={styles.featureCard}
+            onPress={() => navigation.navigate('TerminalMap')}
+          >
+            <Text style={styles.featureEmoji}>🏢</Text>
+            <Text style={styles.featureCardTitle}>Terminal Map</Text>
+            <Text style={styles.featureCardDescription}>
+              View airport layout
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity 
+            style={styles.featureCard}
+            onPress={() => navigation.navigate('RestaurantDirectory')}
+          >
+            <Text style={styles.featureEmoji}>🍽️</Text>
+            <Text style={styles.featureCardTitle}>Dining</Text>
+            <Text style={styles.featureCardDescription}>
+              Find restaurants & cafes
             </Text>
           </TouchableOpacity>
         </View>
@@ -154,7 +182,7 @@ const styles = StyleSheet.create({
   featureCard: {
     backgroundColor: '#fff',
     borderRadius: 20,
-    padding: 20,
+    padding: 18,
     width: '48%',
     marginBottom: 15,
     alignItems: 'center',
