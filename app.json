@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Aussie Air AR",
+    "slug": "aussie-airport-ar",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Aussie Air AR to access your camera to show AR wayfinding."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Aussie Air AR to access your location for accurate wayfinding."
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.aussieair.ar"
+    },
+    "android": {
+      "package": "com.aussieair.ar",
+      "permissions": ["CAMERA", "ACCESS_FINE_LOCATION"]
+    }
+  }
+}
+
